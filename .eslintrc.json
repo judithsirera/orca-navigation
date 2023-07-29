@@ -26,6 +26,7 @@
     "no-console": "error",
     "no-unsafe-finally": "warn",
     "react/react-in-jsx-scope": "off",
-    "import/extensions": "off"
+    "import/extensions": "off",
+    "import/prefer-default-export": "off"
   }
 }

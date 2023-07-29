@@ -3,10 +3,10 @@ export type Margin = 0 | 2 | 4 | 8 | 16 | 24 | 32 | 48 | 'auto';
 export interface MarginProps {
   mgl?: Margin;
   mgt?: Margin;
-  md_mgl?: Margin;
-  md_mgt?: Margin;
-  lg_mgl?: Margin;
-  lg_mgt?: Margin;
+  mdMgl?: Margin;
+  mdMgt?: Margin;
+  lgMgl?: Margin;
+  lgMgt?: Margin;
 }
 
 export interface HideAtBreakpointsProps {

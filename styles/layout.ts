@@ -11,6 +11,12 @@ export const Metrics = {
   hd: `@media screen and (min-width:${Breakpoint.HD}px)`
 };
 
+export enum BorderRadius {
+  small = '5px',
+  medium = '10px',
+  large = '20px'
+}
+
 const hideAtBreakpoints = ({
   hideOnMobile,
   hideOnTablet,
@@ -53,17 +59,17 @@ const getMargins = (mt: Margin | undefined, ml: Margin | undefined) => {
   `;
 };
 
-const applyMargins = ({ mgt, mgl, md_mgt, md_mgl, lg_mgt, lg_mgl }: MarginProps) => {
+const applyMargins = ({ mgt, mgl, mdMgt, mdMgl, lgMgt, lgMgl }: MarginProps) => {
   return css`
     //Margins
     ${getMargins(mgt, mgl)}
 
     ${Metrics.tablet} {
-      ${getMargins(md_mgt, md_mgl)};
+      ${getMargins(mdMgt, mdMgl)};
     }
 
     ${Metrics.desktop} {
-      ${getMargins(lg_mgt, lg_mgl)};
+      ${getMargins(lgMgt, lgMgl)};
     }
   `;
 };

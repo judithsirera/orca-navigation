@@ -8,8 +8,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Alltrana</title>
-        <meta name="description" content="Training together" />
+        <title>Orca navigation</title>
+        <meta name="description" content="Navigating with orca" />
       </Head>
       <ThemeProvider theme={Themes.light}>
         <GlobalStyle />

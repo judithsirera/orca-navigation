@@ -32,7 +32,7 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="icon" href="/assets/favicon.ico" />
+          <link rel="icon" href="https://cdn.theorca.io/favicon.ico" />
         </Head>
         <body>
           <Main />

@@ -52,7 +52,7 @@ Here's an example on how to use these helpers when creating a component.
 then you can do:
 
 ```jsx
-<MyResponsiveComponent hideOnMobile md_mgt={16}>
+<MyResponsiveComponent hideOnMobile mdMgt={16}>
 ```
 
 Layout constrains are defined in [/styles/layout.types.ts](/styles/layout.types.ts).

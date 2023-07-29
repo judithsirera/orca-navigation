@@ -1,12 +1,8 @@
-import H1 from 'elements/typograhpy/H1';
+import Map from 'elements/Map';
 import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
-  return (
-    <>
-      <H1>Hello!</H1>
-    </>
-  );
+  return <Map height={300} markers={{}} />;
 };
 
 export default Home;
