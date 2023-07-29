@@ -16,6 +16,10 @@ declare module 'styled-components' {
       background: Color;
       black: Color;
       white: Color;
+      blue: Color;
+      violet: Color;
+      yellow: Color;
+      red: Color;
     };
   }
 }

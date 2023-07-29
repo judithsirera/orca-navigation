@@ -6,6 +6,10 @@ export enum Color {
   greyEF = '#EFEFEF',
   greyF5 = '#F5F5F5',
   greyF8 = '#F8F8F8',
+  red = '#FF0000',
+  violet = '#8A2BE2',
+  yellow = '#FFFF00',
+  blue = '#0000FF',
   black = '#000000',
   white = '#FFFFFF'
 }

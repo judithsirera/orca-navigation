@@ -9,8 +9,10 @@ const builder = (
   letterSpacing?: number
 ) => {
   return css`
+    padding: 0;
+    margin: 0;
     font-family: ${fontFamily};
-    font-size: ${fontSize};
+    font-size: ${fontSize}px;
     font-weight: ${fontWeight};
     color: ${color};
 

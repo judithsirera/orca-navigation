@@ -12,7 +12,11 @@ const lightTheme: DefaultTheme = {
     textPlaceholder: Color.greyEF,
     background: Color.white,
     black: Color.black,
-    white: Color.white
+    white: Color.white,
+    red: Color.red,
+    violet: Color.violet,
+    yellow: Color.yellow,
+    blue: Color.blue
   }
 };
 

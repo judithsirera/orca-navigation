@@ -27,6 +27,8 @@
     "no-unsafe-finally": "warn",
     "react/react-in-jsx-scope": "off",
     "import/extensions": "off",
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "no-shadow": "off",
+    "import/no-unresolved": "off"
   }
 }

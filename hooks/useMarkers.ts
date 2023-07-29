@@ -5,7 +5,7 @@ import { renderToStaticMarkup, renderToString } from 'react-dom/server';
 
 interface MarkerData {
   id: string;
-  location: Coordinates;
+  coordinates: Coordinates;
   onClick?: (e: HTMLElement) => void;
   onMouseEnter?: (e: HTMLElement) => void;
   onMouseLeave?: (e: HTMLElement) => void;
@@ -18,7 +18,7 @@ export type Markers = {
 };
 
 const buildMarker = ({
-  location,
+  coordinates,
   onClick,
   onMouseEnter,
   onMouseLeave,
@@ -31,7 +31,7 @@ const buildMarker = ({
   const marker = new mapboxgl.Marker({
     draggable: false,
     element: pinElement
-  }).setLngLat([location.lng, location.lat]);
+  }).setLngLat([coordinates.lng, coordinates.lat]);
 
   const element = marker.getElement();
   if (onClick) element.addEventListener('click', () => onClick(element));
@@ -62,11 +62,18 @@ const useMarkers = (defaultCoordinates: MarkerData[] = []) => {
   };
 
   const addMarkers = (data: MarkerData[] = []) => {
-    const m = data.reduce<Markers>((acc, data) => {
-      const marker = buildMarker(data);
-      return { ...acc, [data.id]: marker };
+    const m = data.reduce<Markers>((acc, item) => {
+      const marker = buildMarker(item);
+      return { ...acc, [item.id]: marker };
     }, {});
     setMarkers({ ...markers, ...m });
+  };
+
+  const removeMarker = (id: string) => {
+    if (markers[id]) {
+      markers[id].remove();
+      delete markers[id];
+    }
   };
 
   const resetMarkers = () => {
@@ -80,7 +87,7 @@ const useMarkers = (defaultCoordinates: MarkerData[] = []) => {
     setMarkers(getDefaultMarkers());
   }, []);
 
-  return { markers, addMarker, addMarkers, resetMarkers };
+  return { markers, addMarker, addMarkers, resetMarkers, removeMarker };
 };
 
 export default useMarkers;
