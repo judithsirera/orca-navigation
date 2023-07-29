@@ -24,7 +24,7 @@ export const InfoCard = styled.div`
     position: absolute;
     top: 24px;
     left: 0;
-    width: 360px;
+    max-width: 360px;
     padding: 16px;
     border-radius: ${BorderRadius.medium};
     background-color: ${colors.background}80;
