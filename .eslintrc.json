@@ -1,0 +1,31 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "tsconfigRootDir": ".",
+    "project": ["./tsconfig.json"]
+  },
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "airbnb-base",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended" // Make this the last element so prettier config overrides other formatting rules
+  ],
+  "rules": {
+    "prettier/prettier": ["error", {}, { "usePrettierrc": true }], // Use our .prettierrc file as source
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/no-unsafe-assignment": "warn",
+    "@typescript-eslint/require-await": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
+    "no-console": "error",
+    "no-unsafe-finally": "warn",
+    "react/react-in-jsx-scope": "off",
+    "import/extensions": "off"
+  }
+}
