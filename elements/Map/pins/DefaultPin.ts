@@ -11,8 +11,8 @@ const DefaultPin = styled.div.attrs({ id: 'training-marker-pin' })<DefaultPinPro
     background-color: ${color};
 
     transition: all 0.2s ease;
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
   `}
 `;
 

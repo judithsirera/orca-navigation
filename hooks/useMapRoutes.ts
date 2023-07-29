@@ -24,7 +24,7 @@ const buildMapRoute = ({ id, data, color }: MapRouteData) => {
     },
     paint: {
       'line-color': color,
-      'line-width': 4
+      'line-width': 3
     }
   };
 
